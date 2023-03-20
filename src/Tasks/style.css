@@ -1,0 +1,61 @@
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list__items {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid hsl(0, 0%, 83%);
+}
+
+.list__items--hidden {
+    display: none;
+}
+
+.list__itemsText {
+    word-break: break-all;
+}
+
+.list__itemsText--done {
+    text-decoration: line-through;
+}
+
+.list__buttons {
+    border: none;
+    width: 30px;
+    height: 30px;
+    color: white;
+    padding: 0;
+
+}
+
+.list__buttons--done {
+    background-color: hsl(120, 100%, 25%);
+    transition: 1s;
+}
+
+.list__buttons--done:hover {
+    background-color: hsl(120, 100%, 30%);
+}
+
+.list__buttons--done:active {
+    background-color: hsl(120, 100%, 35%);
+}
+
+.list__buttons--delete {
+    background-color: hsl(0, 100%, 35%);
+    transition: 1s;
+}
+
+.list__buttons--delete:hover {
+    background-color: hsl(0, 100%, 40%);
+}
+
+.list__buttons--delete:active {
+    background-color: hsl(0, 100%, 45%);
+}
