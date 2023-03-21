@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.2276306c.css","mappings":"AAAA,KACE,qBACF,CAEA,iBACE,kBACF,CAEA,MAEE,wBAAiC,CADjC,6BAEF","sources":["index.css"],"sourcesContent":["html {\n  box-sizing: border-box;\n}\n\n*, ::after, ::before {\n  box-sizing: inherit;\n}\n\n.body {\n  font-family: 'Ubuntu', sans-serif;\n  background-color: hsl(0, 0%, 90%);\n}"],"names":[],"sourceRoot":""}
