@@ -1,21 +1,19 @@
-import "./style.css";
+import { List, ListButton, ListItem, ListItemsText } from "./styled";
 const Tasks = (props) => {
   return (
-    <ul className="js-tasks list">
+    <List>
       {props.tasks.map((task) => (
-        <li className={`list__items${task.done && props.hideDone === true ? " list__items--hidden" : ""}`}>
-          <button onClick={() => props.toggleTaskDone(task.id)} className="list__buttons list__buttons--done">
+        <ListItem hidden={task.done && props.hideDone}>
+          <ListButton onClick={() => props.toggleTaskDone(task.id)} done>
             {task.done ? "✓" : ""}
-          </button>
+          </ListButton>
 
-          <span className={`list__itemsText${task.done ? " list__itemsText--done" : ""}`}>{task.content}</span>
+          <ListItemsText done={task.done}>{task.content}</ListItemsText>
 
-          <button onClick={() => props.removeTask(task.id)} className="list__buttons list__buttons--delete">
-            🗑️
-          </button>
-        </li>
+          <ListButton onClick={() => props.removeTask(task.id)}>🗑️</ListButton>
+        </ListItem>
       ))}
-    </ul>
+    </List>
   );
 };
 
